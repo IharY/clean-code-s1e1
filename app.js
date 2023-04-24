@@ -14,51 +14,51 @@ var completedTasksHolder = document.querySelector(".completed-tasks"); //complet
 
 //New task list item
 var createNewTaskElement = function (taskString) {
-    var listItem = document.createElement("li");
-    listItem.className = "section__tasks-item";
+  var listItem = document.createElement("li");
+  listItem.className = "section__tasks-item";
 
-    //input (checkbox)
-    var checkBox = document.createElement("input"); //checkbx
-    checkBox.className = "section__input";
-    //label
-    var label = document.createElement("label"); //label
-    //input (text)
-    var editInput = document.createElement("input"); //text
-    //button.edit
-    var editButton = document.createElement("button"); //edit button
+  //input (checkbox)
+  var checkBox = document.createElement("input"); //checkbx
+  checkBox.className = "section__input";
+  //label
+  var label = document.createElement("label"); //label
+  //input (text)
+  var editInput = document.createElement("input"); //text
+  //button.edit
+  var editButton = document.createElement("button"); //edit button
 
-    //button.delete
-    var deleteButton = document.createElement("button"); //delete button
-    var deleteButtonImg = document.createElement("img"); //delete button image
+  //button.delete
+  var deleteButton = document.createElement("button"); //delete button
+  var deleteButtonImg = document.createElement("img"); //delete button image
 
-    label.innerText = taskString;
-    label.className = "task";
-    label.classList.add("section__label");
+  label.innerText = taskString;
+  label.className = "task";
+  label.classList.add("section__label");
 
   //Each elements, needs appending
-    checkBox.type = "checkbox";
-    editInput.type = "text";
-    editInput.className = "task";
-    editInput.classList.add("section__input");
+  checkBox.type = "checkbox";
+  editInput.type = "text";
+  editInput.className = "task";
+  editInput.classList.add("section__input");
 
-    editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className = "button_edit";
-    editButton.classList.add("button");
+  editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
+  editButton.className = "button_edit";
+  editButton.classList.add("button");
 
-    deleteButton.className = "button_delete";
-    deleteButton.classList.add("button");
-    deleteButtonImg.src = "./remove.svg";
-    deleteButtonImg.className = "button__img";
-    deleteButtonImg.alt = "remove-icon";
-    deleteButton.appendChild(deleteButtonImg);
+  deleteButton.className = "button_delete";
+  deleteButton.classList.add("button");
+  deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.className = "button__img";
+  deleteButtonImg.alt = "remove-icon";
+  deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
-    listItem.appendChild(checkBox);
-    listItem.appendChild(label);
-    listItem.appendChild(editInput);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-    return listItem;
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(editInput);
+  listItem.appendChild(editButton);
+  listItem.appendChild(deleteButton);
+  return listItem;
 };
 
 var addTask = function () {
